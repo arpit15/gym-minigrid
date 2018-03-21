@@ -65,22 +65,15 @@ def main():
             print('done!')
             resetEnv()
 
-    # renderer.window.setKeyDownCb(keyDownCb)
+   renderer.window.setKeyDownCb(keyDownCb)
 
-    done = False
-    tot_reward = 0
-    while not done:
-        # env.render('human')
-        # time.sleep(0.01)
-        action = env.action_space.sample()
-        print(action)
-        ob, r, done, info = env.step(action)
-        tot_reward += r
+    while True:
+        env.render('human')
+        time.sleep(0.01)
+
         # If the window was closed
-        # if renderer.window == None:
-        #     break
-
-    print("Total Reward:%f"%r)
+        if renderer.window == None:
+            break
 
 if __name__ == "__main__":
     main()

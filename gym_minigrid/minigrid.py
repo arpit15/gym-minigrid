@@ -588,9 +588,7 @@ class MiniGridEnv(gym.Env):
         self.stepCount = 0
 
         # Return first observation
-        # obs = self._genObs()
         obs = self.agentPos[0]*self.gridSize + self.agentPos[1]
-
 
         return obs
 
@@ -771,9 +769,7 @@ class MiniGridEnv(gym.Env):
         if self.stepCount >= self.maxSteps:
             done = True
 
-        # obs = self._genObs()
         obs = self.agentPos[0]*self.gridSize + self.agentPos[1]
-
         return obs, reward, done, {}
 
     def _genObs(self):
