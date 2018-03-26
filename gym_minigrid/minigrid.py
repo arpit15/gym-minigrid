@@ -886,6 +886,7 @@ class MiniGridEnv(gym.Env):
             ( 12,  0),
             (-12, -10)
         ])
+        # r.drawCircle(0., 0., 10)
         r.pop()
 
         # Highlight what the agent can see

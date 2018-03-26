@@ -1,4 +1,7 @@
+*.egg
 *.pyc
 *__pycache__
 *egg-info
 trained_models
+build/*
+dist/*
